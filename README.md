@@ -66,9 +66,8 @@ This project was created to:
 ---
 
 ## 📸 Screenshots
-
-(Add screenshots inside a `/screenshots` folder and link them here)
-
+<img width="1865" height="870" alt="HR_SS1" src="https://github.com/user-attachments/assets/16843060-7c83-4b04-ad5e-c3f458cd93ce" />
+<img width="1878" height="888" alt="HR_SS2" src="https://github.com/user-attachments/assets/df9439bb-46ab-427d-90af-878f9116e1ed" />
 
 ---
 
@@ -82,4 +81,5 @@ This project was created to:
 ---
 
 ⭐ If you like this project, consider giving it a star!
+
 
