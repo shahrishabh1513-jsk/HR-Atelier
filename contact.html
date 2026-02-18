@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact HR FashionStyle - Get in touch with us for any questions or support">
+    <meta name="keywords" content="contact, fashion support, customer service, HR FashionStyle">
+    <meta name="author" content="HR_FashionStyle">
+    <link rel="icon" href="./images/Rweblogo.png" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="Style/contact.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <title>Contact Us | HR FashionStyle</title>
+</head>
+<body>
+    <!-- Contact Loading Screen -->
+    <div class="contact-loading-screen">
+        <div class="contact-loading-spinner">
+            <div class="contact-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Contact Top Announcement Bar -->
+    <div class="contact-announcement-bar">
+        <p>✨ Free shipping on all orders over $100 | 7-day return policy ✨</p>
+    </div>
+
+    <!-- Contact Header -->
+    <header class="contact-header">
+        <div class="contact-container">
+            <div class="contact-header-content">
+                <!-- Contact Mobile Menu Toggle -->
+                <button class="contact-mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="contact-hamburger"></span>
+                </button>
+
+                <!-- Contact Logo -->
+                <div class="contact-logo-container">
+                    <a href="index.html" class="contact-logo">
+                        <img src="./images/HRL1.png" alt="HR FashionStyle" width="120">
+                    </a>
+                </div>
+
+                <!-- Contact Navigation -->
+                <nav class="contact-nav">
+                    <ul class="contact-nav-list">
+                        <li><a href="index.html" class="contact-nav-link">Home</a></li>
+                        <li><a href="products.html" class="contact-nav-link">Shop</a></li>
+                        <li><a href="about.html" class="contact-nav-link">About</a></li>
+                        <li><a href="contact.html" class="contact-nav-link contact-active">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Header Actions -->
+                <div class="contact-header-actions">
+                    <!-- Contact Search -->
+                    <div class="contact-search-container">
+                        <button class="contact-search-toggle" aria-label="Toggle search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                        <div class="contact-search-box">
+                            <input type="text" placeholder="Search products..." class="contact-search-input">
+                            <button class="contact-search-btn" aria-label="Search">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact User Account -->
+                    <div class="contact-user-actions">
+                        <a href="login.html" class="contact-user-icon" title="Account">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </a>
+                        <div class="contact-user-dropdown">
+                            <a href="login.html">Sign In</a>
+                            <a href="#">My Orders</a>
+                            <a href="#">Wishlist</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Cart -->
+                    <div class="contact-cart-container">
+                        <a href="#" class="contact-cart-icon" title="Cart">
+                            <ion-icon name="bag-outline"></ion-icon>
+                            <span class="contact-cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Page Header -->
+    <section class="contact-page-header">
+        <div class="contact-container">
+            <h1 class="contact-page-title">Contact Us</h1>
+            <div class="contact-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="contact-separator"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                <span class="contact-current">Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-section">
+        <div class="contact-container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+91 7861976 128</p>
+                    <p class="contact-info-small">Mon-Sat, 10am-7pm</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>hr@safashionstyle.com</p>
+                    <p class="contact-info-small">24/7 Support</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Alkapuri, Vadodara</p>
+                    <p class="contact-info-small">Gujarat - 390007</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-main-section">
+        <div class="contact-container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h2>Send Us a Message</h2>
+                    <p>We'll get back to you within 24 hours</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="contact-form-row">
+                            <div class="contact-form-group">
+                                <input type="text" id="contactName" placeholder="Your Name" required>
+                            </div>
+                            <div class="contact-form-group">
+                                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-group">
+                            <input type="text" id="contactSubject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="contact-form-group">
+                            <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="contact-btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Map -->
+                <div class="contact-map-card">
+                    <h2>Our Location</h2>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.6805!2d73.1734!3d22.3071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDE4JzI1LjYiTiA3M8KwMTAnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <div class="contact-hours">
+                        <h3>Store Hours</h3>
+                        <ul>
+                            <li><span>Monday - Friday:</span> 10:00 AM - 8:00 PM</li>
+                            <li><span>Saturday:</span> 10:00 AM - 6:00 PM</li>
+                            <li><span>Sunday:</span> Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact FAQ Section (Short) -->
+    <section class="contact-faq-section">
+        <div class="contact-container">
+            <h2 class="contact-faq-title">Quick Answers</h2>
+            <div class="contact-faq-grid">
+                <div class="contact-faq-item">
+                    <h3>Shipping Time?</h3>
+                    <p>Business working days</p>
+                </div>
+                <div class="contact-faq-item">
+                    <h3>Returns?</h3>
+                    <p>7-day return policy</p>
+                </div>
+                <div class="contact-faq-item">
+                    <h3>Payment Methods?</h3>
+                    <p>Cards, UPI, COD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer class="contact-footer">
+        <div class="contact-container">
+            <div class="contact-footer-content">
+                <div class="contact-footer-section">
+                    <div class="contact-footer-logo">
+                        <img src="./images/HRL2.png" alt="HR FashionStyle" width="140">
+                        <p>Elevating style with premium fashion since 2026.</p>
+                    </div>
+                    <div class="contact-social-links">
+                        <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" aria-label="Pinterest"><ion-icon name="logo-pinterest"></ion-icon></a>
+                    </div>
+                </div>
+                
+                <div class="contact-footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-footer-info">
+                        <li><ion-icon name="call-outline"></ion-icon> +91 7861976 128</li>
+                        <li><ion-icon name="mail-outline"></ion-icon> hr@fashion.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-footer-bottom">
+                <p>&copy; 2026 HR FashionStyle. All rights reserved.</p>
+                <div class="contact-payment-methods">
+                    <ion-icon name="logo-cc-visa"></ion-icon>
+                    <ion-icon name="logo-cc-mastercard"></ion-icon>
+                    <ion-icon name="logo-cc-paypal"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Back to Top Button -->
+    <button id="contactBackToTop" class="contact-back-to-top">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+
+    <!-- Contact Cart Sidebar -->
+    <div class="contact-cart-sidebar" id="contactCartSidebar">
+        <div class="contact-cart-header">
+            <h3>Your Cart</h3>
+            <button class="contact-close-cart" id="contactCloseCart">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="contact-cart-items" id="contactCartItems">
+            <div class="contact-empty-cart">
+                <ion-icon name="bag-outline"></ion-icon>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="contact-cart-footer">
+            <div class="contact-cart-total">
+                <span>Total:</span>
+                <span id="contactCartTotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="contact-btn-primary">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="JavaScript/contact.js"></script>
+</body>
+</html>

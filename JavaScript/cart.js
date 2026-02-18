@@ -363,3 +363,4 @@ window.updateQuantity = updateQuantity;
 window.checkout = checkout;
 window.getCart = () => cart;
 window.getCartTotal = calculateCartTotal;
+
