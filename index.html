@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the latest trends in fashion for 
+    women and men at SA FashionStyle. Shop our wide selection of clothes, bags,
+    jewelry, and more. Elevate your style with our curated collections.">
+    <meta name="keywords" content="clothes, women, men, fashion, bags, jewelry, SA FashionStyle, latest trends, stylish clothing, accessories">
+    <meta name="author" content="SA_FashionStyle">
+    <link rel="icon" href="./images/Rweblogo.png" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/main.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- AOS Animation Library (REMOVED) -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    
+    <title>HR FashionStyle | Premium Fashion Collection</title>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <p>✨ Free shipping on all orders over $100 | 14-day return policy ✨</p>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="./images/HRL1.png" alt="SA FashionStyle" width="120">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Shop</a></li>
+                        <li><a href="#" class="nav-link">About</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Search -->
+                    <div class="search-container">
+                        <button class="search-toggle" aria-label="Toggle search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search products..." class="search-input">
+                            <button class="search-btn" aria-label="Search">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- User Account -->
+                    <div class="user-actions">
+                        <a href="login.html" class="user-icon" title="Account">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </a>
+                        <div class="user-dropdown">
+                            <a href="login.html">Sign In</a>
+                            <a href="#">My Orders</a>
+                            <a href="#">Wishlist</a>
+                        </div>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="cart-container">
+                        <a href="#" class="cart-icon" title="Cart">
+                            <ion-icon name="bag-outline"></ion-icon>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-image" style="background-image: url('images/background/slide16_bdfdea89-9df3-48da-9f0a-888fd50a83d5.webp');"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-subtitle">New Collection 2024</span>
+                        <h1 class="slide-title">Elevate Your Style with Premium Fashion</h1>
+                        <p class="slide-description">Discover exclusive designs that blend comfort with sophistication</p>
+                        <a href="products.html" class="btn-primary">Shop Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-image" style="background-image: url('images/background/background2.webp');"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-subtitle">Summer Sale</span>
+                        <h1 class="slide-title">Up to 50% Off Selected Items</h1>
+                        <p class="slide-description">Limited time offer on our summer collection</p>
+                        <a href="products.html" class="btn-primary">Shop Sale</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-image" style="background-image: url('images/background/background3.webp');"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-subtitle">Accessories</span>
+                        <h1 class="slide-title">Complete Your Look</h1>
+                        <p class="slide-description">Find the perfect accessories to complement your style</p>
+                        <a href="products.html" class="btn-primary">Explore Accessories</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="slider-prev">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="slider-next">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <ion-icon name="rocket-outline"></ion-icon>
+                    </div>
+                    <h3>Free Shipping</h3>
+                    <p>Free shipping on all US orders over ₹1000</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <ion-icon name="refresh-outline"></ion-icon>
+                    </div>
+                    <h3>7-Day Returns</h3>
+                    <p>Hassle-free returns within 14 days</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure payment with SSL encryption</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <ion-icon name="headset-outline"></ion-icon>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer support anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-animate="fade-up">Trending Products</h2>
+                <p class="section-subtitle" data-animate="fade-up">Discover our most popular items this season</p>
+            </div>
+            
+            <div class="products-grid" id="trending-products">
+                <!-- Product 1 - Elegant Blue Dress -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/94/5b/79/945b7931fbb9f8922102ac0566e02060.jpg" 
+                             alt="Elegant Blue Evening Dress" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="1">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="1">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Elegant Blue Evening Dress</h3>
+                        <span class="product-category">Women's Evening Wear</span>
+                        <div class="product-price">$129.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 2 - Classic Trench Coat -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/3c/5a/bb/3c5abb5bd7acd1d4b6d7a62996c8dcf8.jpg" 
+                             alt="Classic Beige Trench Coat" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="2">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="2">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Classic Beige Trench Coat</h3>
+                        <span class="product-category">Women's Outerwear</span>
+                        <div class="product-price">$89.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 3 - Designer Handbag -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/f1/ab/1a/f1ab1a7aac776d74986bfb925a562594.jpg" 
+                             alt="Luxury Designer Handbag" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="3">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="3">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Luxury Designer Handbag</h3>
+                        <span class="product-category">Accessories</span>
+                        <div class="product-price">$249.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Summer Floral Dress -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/b0/54/32/b05432d015a975491fd1f1e6a9417849.jpg" 
+                             alt="Summer Floral Maxi Dress" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="4">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="4">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Summer Floral Maxi Dress</h3>
+                        <span class="product-category">Women's Casual Wear</span>
+                        <div class="product-price">$69.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Minimalist Jewelry Set -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/72/2a/62/722a6289b84f6ba941c59e5af5a88994.jpg" 
+                             alt="Minimalist Gold Jewelry Set" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="5">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="5">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Minimalist Gold Jewelry Set</h3>
+                        <span class="product-category">Jewelry</span>
+                        <div class="product-price">$54.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 6 - Casual Denim Jacket -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/1200x/e3/70/a3/e370a395ae8b109aa5f2664efaa386ab.jpg" 
+                             alt="Casual Denim Jacket" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="6">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="6">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Casual Denim Jacket</h3>
+                        <span class="product-category">Women's Outerwear</span>
+                        <div class="product-price">$59.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 7 - Evening Gown -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/5d/b5/01/5db501461c00d9f18dd638c428ab46d6.jpg" 
+                             alt="Elegant Black Evening Gown" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="7">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="7">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Elegant Black Evening Gown</h3>
+                        <span class="product-category">Women's Formal Wear</span>
+                        <div class="product-price">$149.99</div>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Bohemian Dress -->
+                <div class="product-card" data-animate="fade-up">
+                    <div class="product-image">
+                        <img src="https://i.pinimg.com/736x/c0/d8/1a/c0d81af974d6447d79e15bce7bf6274d.jpg" 
+                             alt="Bohemian Style Dress" 
+                             loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view" data-id="8">
+                                Quick View
+                            </button>
+                            <button class="add-to-cart" data-id="8">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Bohemian Style Dress</h3>
+                        <span class="product-category">Women's Casual Wear</span>
+                        <div class="product-price">$79.99</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="products.html" class="btn-secondary" data-animate="fade-up">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Banner -->
+    <section class="collections-section">
+        <div class="container">
+            <div class="collections-grid">
+                <div class="collection-card" data-animate="fade-right">
+                    <div class="collection-image" style="background-image: url('./images/tranding/Summer\ Outfits.jpg');">
+                        <div class="collection-content">
+                            <h3>Summer Collection</h3>
+                            <p>Light and breezy styles for the sunny days</p>
+                            <a href="#" class="btn-outline">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection-card" data-animate="fade-up">
+                    <div class="collection-image" style="background-image: url('./images/tranding/New\ Arrivals.jpg');">
+                        <div class="collection-content">
+                            <h3>New Arrivals</h3>
+                            <p>Fresh styles just in</p>
+                            <a href="#" class="btn-outline">Discover</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection-card" data-animate="fade-left">
+                    <div class="collection-image" style="background-image: url('./images/tranding/Accessories.jpg');">
+                        <div class="collection-content">
+                            <h3>Accessories</h3>
+                            <p>Complete your look</p>
+                            <a href="#" class="btn-outline">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" data-animate="fade-up">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Newsletter</h2>
+                <p>Subscribe to get 20% off your first order and updates on new arrivals</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-note">By subscribing, you agree to our Privacy Policy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" data-animate="fade-up">
+                    <div class="footer-logo">
+                        <img src="./images/HRL2.png" alt="SA FashionStyle" width="140">
+                        <p>Elevating style with premium fashion since 2026.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section" data-animate="fade-up">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section" data-animate="fade-up">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section" data-animate="fade-up">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <ion-icon name="location-outline"></ion-icon>
+                            <span>Alkapuri, Vadodara - 390007</span>
+                        </li>
+                        <li>
+                            <ion-icon name="call-outline"></ion-icon>
+                            <span>+91 7861976 128</span>
+                        </li>
+                        <li>
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>hr@safashionstyle.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 HR FashionStyle. |  All rights reserved.  |  R15</p>
+                <div class="payment-methods">
+                    <span>We accept:</span>
+                    <ion-icon name="logo-cc-visa"></ion-icon>
+                    <ion-icon name="logo-cc-mastercard"></ion-icon>
+                    <ion-icon name="logo-cc-amex"></ion-icon>
+                    <ion-icon name="logo-cc-paypal"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+            <div class="empty-cart">
+                <ion-icon name="bag-outline"></ion-icon>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="cartPage.html" class="btn-primary">View Cart</a>
+            <a href="checkout.html" class="btn-secondary">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- AOS Removed -->
+    <script src="JavaScript/index.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/cart.js"></script>
+</body>
+</html>

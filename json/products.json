@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "Elegant Blue Evening Dress",
+        "price": "$129.99",
+        "images": [
+            "https://i.pinimg.com/736x/94/5b/79/945b7931fbb9f8922102ac0566e02060.jpg",
+            "https://i.pinimg.com/736x/94/5b/79/945b7931fbb9f8922102ac0566e02060.jpg"
+        ],
+        "category": "Woman",
+        "subcategory": "Evening Wear",
+        "description": "Stunning blue evening dress perfect for formal occasions. Features elegant design and comfortable fit.",
+        "rating": 4.5,
+        "reviews": 23,
+        "isTrending": true,
+        "isNew": false,
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["Blue"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 2,
+        "name": "Classic Beige Trench Coat",
+        "price": "$89.99",
+        "images": [
+            "https://i.pinimg.com/736x/3c/5a/bb/3c5abb5bd7acd1d4b6d7a62996c8dcf8.jpg",
+            "https://i.pinimg.com/736x/3c/5a/bb/3c5abb5bd7acd1d4b6d7a62996c8dcf8.jpg"
+        ],
+        "category": "Woman",
+        "subcategory": "Outerwear",
+        "description": "Timeless beige trench coat that adds sophistication to any outfit. Water-resistant and stylish.",
+        "rating": 4.2,
+        "reviews": 15,
+        "isTrending": true,
+        "isNew": false,
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Beige"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 3,
+        "name": "Luxury Designer Handbag",
+        "price": "$249.99",
+        "images": [
+            "https://i.pinimg.com/1200x/f1/ab/1a/f1ab1a7aac776d74986bfb925a562594.jpg",
+            "https://i.pinimg.com/1200x/f1/ab/1a/f1ab1a7aac776d74986bfb925a562594.jpg"
+        ],
+        "category": "Bags",
+        "subcategory": "Handbags",
+        "description": "Premium leather handbag with gold-tone hardware. Spacious interior with multiple compartments.",
+        "rating": 4.8,
+        "reviews": 42,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["One Size"],
+        "colors": ["Brown", "Black"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 4,
+        "name": "Summer Floral Maxi Dress",
+        "price": "$69.99",
+        "images": [
+            "https://i.pinimg.com/1200x/b0/54/32/b05432d015a975491fd1f1e6a9417849.jpg",
+            "https://i.pinimg.com/1200x/b0/54/32/b05432d015a975491fd1f1e6a9417849.jpg"
+        ],
+        "category": "Woman",
+        "subcategory": "Casual Wear",
+        "description": "Beautiful floral maxi dress perfect for summer days. Lightweight and breathable fabric.",
+        "rating": 4.3,
+        "reviews": 18,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Multi"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 5,
+        "name": "Minimalist Gold Jewelry Set",
+        "price": "$54.99",
+        "images": [
+            "https://i.pinimg.com/1200x/72/2a/62/722a6289b84f6ba941c59e5af5a88994.jpg",
+            "https://i.pinimg.com/1200x/72/2a/62/722a6289b84f6ba941c59e5af5a88994.jpg"
+        ],
+        "category": "Jewelry",
+        "subcategory": "Sets",
+        "description": "Elegant gold-plated jewelry set including necklace, earrings, and bracelet. Perfect for any occasion.",
+        "rating": 4.6,
+        "reviews": 31,
+        "isTrending": true,
+        "isNew": false,
+        "sizes": ["One Size"],
+        "colors": ["Gold"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 6,
+        "name": "Casual Denim Jacket",
+        "price": "$59.99",
+        "images": [
+            "https://i.pinimg.com/1200x/e3/70/a3/e370a395ae8b109aa5f2664efaa386ab.jpg",
+            "https://i.pinimg.com/1200x/e3/70/a3/e370a395ae8b109aa5f2664efaa386ab.jpg"
+        ],
+        "category": "Woman",
+        "subcategory": "Outerwear",
+        "description": "Classic denim jacket that never goes out of style. Versatile piece for casual outfits.",
+        "rating": 4.1,
+        "reviews": 12,
+        "isTrending": false,
+        "isNew": false,
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Blue"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 7,
+        "name": "Elegant Black Evening Gown",
+        "price": "$149.99",
+        "images": [
+            "https://i.pinimg.com/736x/5d/b5/01/5db501461c00d9f18dd638c428ab46d6.jpg",
+            "https://i.pinimg.com/736x/5d/b5/01/5db501461c00d9f18dd638c428ab46d6.jpg"
+        ],
+        "category": "Woman",
+        "subcategory": "Formal Wear",
+        "description": "Stunning black gown for formal events. Features elegant silhouette and premium fabric.",
+        "rating": 4.9,
+        "reviews": 27,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["S", "M", "L"],
+        "colors": ["Black"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 8,
+        "name": "Bohemian Style Dress",
+        "price": "$79.99",
+        "images": [
+            "https://i.pinimg.com/736x/c0/d8/1a/c0d81af974d6447d79e15bce7bf6274d.jpg",
+            "https://i.pinimg.com/736x/c0/d8/1a/c0d81af974d6447d79e15bce7bf6274d.jpg"
+        ],
+        "category": "Woman",
+        "subcategory": "Casual Wear",
+        "description": "Free-spirited bohemian dress with unique pattern. Comfortable and stylish for daily wear.",
+        "rating": 4.0,
+        "reviews": 14,
+        "isTrending": false,
+        "isNew": false,
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Multi"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 9,
+        "name": "Classic Men's Blazer",
+        "price": "$119.99",
+        "images": [
+            "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+            "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+        ],
+        "category": "Man",
+        "subcategory": "Formal Wear",
+        "description": "Sharp navy blazer for the modern gentleman. Perfect for business meetings and formal events.",
+        "rating": 4.5,
+        "reviews": 19,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Navy", "Black", "Gray"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 10,
+        "name": "Leather Messenger Bag",
+        "price": "$89.99",
+        "images": [
+            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+        ],
+        "category": "Bags",
+        "subcategory": "Messenger Bags",
+        "description": "Genuine leather messenger bag with adjustable strap. Perfect for work or travel.",
+        "rating": 4.3,
+        "reviews": 22,
+        "isTrending": false,
+        "isNew": false,
+        "sizes": ["One Size"],
+        "colors": ["Brown", "Black"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 11,
+        "name": "Silver Pendant Necklace",
+        "price": "$39.99",
+        "images": [
+            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80",
+            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80"
+        ],
+        "category": "Jewelry",
+        "subcategory": "Necklaces",
+        "description": "Elegant silver pendant necklace with delicate chain. Perfect for everyday wear or special occasions.",
+        "rating": 4.2,
+        "reviews": 16,
+        "isTrending": false,
+        "isNew": true,
+        "sizes": ["One Size"],
+        "colors": ["Silver"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 12,
+        "name": "Casual Men's Shirt",
+        "price": "$45.99",
+        "images": [
+            "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+            "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+        ],
+        "category": "Man",
+        "subcategory": "Casual Wear",
+        "description": "Comfortable casual shirt in premium cotton. Perfect for weekend outings and casual Fridays.",
+        "rating": 3.9,
+        "reviews": 9,
+        "isTrending": false,
+        "isNew": false,
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Blue", "White", "Gray"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 13,
+        "name": "Designer Bedding Set",
+        "price": "$129.99",
+        "images": [
+            "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+        ],
+        "category": "Bedroom",
+        "subcategory": "Bedding",
+        "description": "Luxury 1000-thread count cotton bedding set. Includes duvet cover, fitted sheet, and pillowcases.",
+        "rating": 4.7,
+        "reviews": 34,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["Twin", "Full", "Queen", "King"],
+        "colors": ["White", "Gray", "Beige"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 14,
+        "name": "Men's Leather Jacket",
+        "price": "$199.99",
+        "images": [
+            "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+            "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
+        ],
+        "category": "Man",
+        "subcategory": "Outerwear",
+        "description": "Classic biker leather jacket made from premium genuine leather. Timeless style that gets better with age.",
+        "rating": 4.8,
+        "reviews": 28,
+        "isTrending": true,
+        "isNew": false,
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Black", "Brown"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 15,
+        "name": "Pearl Earrings Set",
+        "price": "$49.99",
+        "images": [
+            "https://images.unsplash.com/photo-1630019852942-f89202989a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+            "https://images.unsplash.com/photo-1630019852942-f89202989a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+        ],
+        "category": "Jewelry",
+        "subcategory": "Earrings",
+        "description": "Elegant freshwater pearl earrings. Perfect for bridal wear or special occasions.",
+        "rating": 4.5,
+        "reviews": 21,
+        "isTrending": false,
+        "isNew": true,
+        "sizes": ["One Size"],
+        "colors": ["White"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 16,
+        "name": "Women's Ankle Boots",
+        "price": "$79.99",
+        "images": [
+            "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+            "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+        ],
+        "category": "Accessories",
+        "subcategory": "Footwear",
+        "description": "Stylish suede ankle boots with block heel. Comfortable for all-day wear.",
+        "rating": 4.3,
+        "reviews": 17,
+        "isTrending": true,
+        "isNew": false,
+        "sizes": ["6", "7", "8", "9", "10"],
+        "colors": ["Black", "Brown", "Tan"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 17,
+        "name": "Silk Scarf",
+        "price": "$34.99",
+        "images": [
+            "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+            "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+        ],
+        "category": "Accessories",
+        "subcategory": "Scarves",
+        "description": "Luxurious 100% silk scarf with hand-rolled edges. Adds elegance to any outfit.",
+        "rating": 4.4,
+        "reviews": 13,
+        "isTrending": false,
+        "isNew": true,
+        "sizes": ["One Size"],
+        "colors": ["Multi", "Red", "Blue"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 18,
+        "name": "Men's Formal Shoes",
+        "price": "$99.99",
+        "images": [
+            "https://images.unsplash.com/photo-1614252369475-531eba835eb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+            "https://images.unsplash.com/photo-1614252369475-531eba835eb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+        ],
+        "category": "Man",
+        "subcategory": "Footwear",
+        "description": "Classic leather oxford shoes for formal occasions. Comfortable and stylish.",
+        "rating": 4.6,
+        "reviews": 25,
+        "isTrending": true,
+        "isNew": false,
+        "sizes": ["8", "9", "10", "11", "12"],
+        "colors": ["Black", "Brown"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 19,
+        "name": "Decorative Throw Pillows",
+        "price": "$29.99",
+        "images": [
+            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+        ],
+        "category": "Bedroom",
+        "subcategory": "Decor",
+        "description": "Set of 2 decorative throw pillows with removable covers. Adds style to your bedroom or living room.",
+        "rating": 4.2,
+        "reviews": 11,
+        "isTrending": false,
+        "isNew": true,
+        "sizes": ["18x18"],
+        "colors": ["Multi", "Gray", "Blue"],
+        "inStock": true,
+        "featured": false
+    },
+    {
+        "id": 20,
+        "name": "Women's Handbag Collection",
+        "price": "$159.99",
+        "images": [
+            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
+        ],
+        "category": "Bags",
+        "subcategory": "Handbags",
+        "description": "Designer-inspired structured handbag with gold-tone hardware. Perfect for work and special occasions.",
+        "rating": 4.7,
+        "reviews": 36,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["One Size"],
+        "colors": ["Black", "Beige", "Navy"],
+        "inStock": true,
+        "featured": true
+    }
+]

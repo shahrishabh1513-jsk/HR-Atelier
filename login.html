@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your HR FashionStyle account">
+    <meta name="keywords" content="login, account, fashion, shopping, HR FashionStyle">
+    <meta name="author" content="HR_FashionStyle">
+    <link rel="icon" href="./images/Rweblogo.png" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="Style/main.css">
+    <link rel="stylesheet" href="Style/login.css">
+    <link rel="stylesheet" href="Style/auth.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <title>Login | HR FashionStyle</title>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <p>✨ Free shipping on all orders over $100 | 14-day return policy ✨</p>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="./images/HRL1.png" alt="HR FashionStyle" width="120">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Shop</a></li>
+                        <li><a href="#" class="nav-link">About</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Search -->
+                    <div class="search-container">
+                        <button class="search-toggle" aria-label="Toggle search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search products..." class="search-input">
+                            <button class="search-btn" aria-label="Search">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- User Account -->
+                    <div class="user-actions">
+                        <a href="login.html" class="user-icon" title="Account">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </a>
+                        <div class="user-dropdown">
+                            <a href="login.html">Sign In</a>
+                            <a href="#">My Orders</a>
+                            <a href="#">Wishlist</a>
+                        </div>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="cart-container">
+                        <a href="#" class="cart-icon" title="Cart">
+                            <ion-icon name="bag-outline"></ion-icon>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-main">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Left Side - Branding -->
+                <div class="auth-branding" data-animate="fade-right">
+                    <div class="auth-logo">
+                        <img src="./images/HRL2.png" alt="HR FashionStyle" width="180">
+                        <h1>Welcome Back!</h1>
+                        <p>Sign in to access your account and continue your fashion journey.</p>
+                    </div>
+                    <div class="auth-features">
+                        <div class="auth-feature">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <div>
+                                <h4>Saved Items</h4>
+                                <p>Access your wishlist anytime</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature">
+                            <ion-icon name="time-outline"></ion-icon>
+                            <div>
+                                <h4>Order Tracking</h4>
+                                <p>Track all your purchases</p>
+                            </div>
+                        </div>
+                        <div class="auth-feature">
+                            <ion-icon name="card-outline"></ion-icon>
+                            <div>
+                                <h4>Express Checkout</h4>
+                                <p>Save time with saved details</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Login Form -->
+                <div class="auth-form-container" data-animate="fade-left">
+                    <div class="auth-form-header">
+                        <h2>Sign In</h2>
+                        <p>Don't have an account? <a href="signup.html">Create one here</a></p>
+                    </div>
+
+                    <form id="login-form" class="auth-form" onsubmit="return false;">
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                                <button type="button" class="toggle-password" aria-label="Show password">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </button>
+                            </div>
+                            <span class="error-message" id="passwordError"></span>
+                        </div>
+
+                        <!-- Remember Me & Forgot Password -->
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox" id="remember">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="btn-login" class="btn-primary auth-submit-btn">
+                            <span>Sign In</span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+
+                        <!-- Social Login -->
+                        <div class="auth-divider">
+                            <span>Or sign in with</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="social-btn google-btn">
+                                <ion-icon name="logo-google"></ion-icon>
+                                <span>Google</span>
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" data-animate="fade-up">
+                    <div class="footer-logo">
+                        <img src="./images/HRL2.png" alt="HR FashionStyle" width="140">
+                        <p>Elevating style with premium fashion since 2026.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section" data-animate="fade-up">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section" data-animate="fade-up">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section" data-animate="fade-up">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <ion-icon name="location-outline"></ion-icon>
+                            <span>Alkapuri, Vadodara - 390007</span>
+                        </li>
+                        <li>
+                            <ion-icon name="call-outline"></ion-icon>
+                            <span>+91 7861976 128</span>
+                        </li>
+                        <li>
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>hr@safashionstyle.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 HR FashionStyle. | All rights reserved. | R15</p>
+                <div class="payment-methods">
+                    <span>We accept:</span>
+                    <ion-icon name="logo-cc-visa"></ion-icon>
+                    <ion-icon name="logo-cc-mastercard"></ion-icon>
+                    <ion-icon name="logo-cc-amex"></ion-icon>
+                    <ion-icon name="logo-cc-paypal"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <ion-icon name="bag-outline"></ion-icon>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="cartPage.html" class="btn-primary">View Cart</a>
+            <a href="checkout.html" class="btn-secondary">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="JavaScript/index.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/validation.js"></script>
+    <script src="JavaScript/cart.js"></script>
+</body>
+</html>
