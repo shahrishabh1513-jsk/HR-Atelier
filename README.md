@@ -68,7 +68,7 @@ This project was created to:
 ## 📸 Screenshots
 
 (Add screenshots inside a `/screenshots` folder and link them here)
-
+<p> <img src="https://img.shields.io/badge/Fashion-Ecommerce-ff69b4?style=for-the-badge"/> <img src="https://img.shields.io/badge/Luxury-UI-black?style=for-the-badge"/> <img src="https://img.shields.io/badge/Frontend-Project-blue?style=for-the-badge"/> <img src="https://img.shields.io/badge/Responsive-Design-00c853?style=for-the-badge"/> <img src="https://img.shields.io/badge/Shopping-Cart-orange?style=for-the-badge"/> <img src="https://img.shields.io/badge/Product-Filtering-purple?style=for-the-badge"/> <img src="https://img.shields.io/badge/UI%2FUX-Design-9c27b0?style=for-the-badge"/> <img src="https://img.shields.io/badge/Modern-Web-Experience-1e88e5?style=for-the-badge"/> <img src="https://img.shields.io/badge/JavaScript-DOM-yellow?style=for-the-badge"/> <img src="https://img.shields.io/badge/Portfolio-Ready-success?style=for-the-badge"/> </p>
 
 ---
 
@@ -82,3 +82,4 @@ This project was created to:
 ---
 
 ⭐ If you like this project, consider giving it a star!
+
