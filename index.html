@@ -489,6 +489,568 @@
         </div>
     </div>
 
+    <!-- ========== GOOGLE GEMINI CHATBOT INTEGRATION ========== -->
+    <!-- Gemini Chatbot HTML -->
+    <div class="gemini-chatbot-container" id="geminiChatbot">
+        <div class="gemini-chatbot-button" id="chatbotToggle">
+            <ion-icon name="sparkles-outline"></ion-icon>
+            <span>AI Assistant</span>
+        </div>
+        
+        <div class="gemini-chatbot-window" id="chatbotWindow">
+            <div class="gemini-chatbot-header">
+                <div class="gemini-header-left">
+                    <img src="./images/HRL1.png" alt="HR FashionStyle" class="gemini-avatar">
+                    <div>
+                        <h3>HR FashionStyle Assistant</h3>
+                        <p class="gemini-status">Powered by Gemini AI</p>
+                    </div>
+                </div>
+                <button class="gemini-close-btn" id="closeChatbot">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+            
+            <div class="gemini-chat-messages" id="chatMessages">
+                <div class="gemini-message bot-message">
+                    <div class="message-content">
+                        👋 Hi! I'm your HR FashionStyle AI assistant powered by Google Gemini. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gemini-chat-input">
+                <div class="suggested-questions" id="suggestedQuestions">
+                    <button class="suggested-q">What's your return policy?</button>
+                    <button class="suggested-q">Show me trending products</button>
+                    <button class="suggested-q">Do you ship to India?</button>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="userMessage" placeholder="Ask me anything about fashion, products, or orders..." autocomplete="off">
+                    <button id="sendMessage" class="gemini-send-btn">
+                        <ion-icon name="send-outline"></ion-icon>
+                    </button>
+                </div>
+                <p class="gemini-disclaimer">AI responses may not always be accurate. For precise info, contact support.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gemini Chatbot Styles -->
+    <style>
+    /* Gemini Chatbot Container */
+    .gemini-chatbot-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Chatbot Toggle Button */
+    .gemini-chatbot-button {
+        background: linear-gradient(135deg, #1E1E1E 0%, #2D2D2D 100%);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 215, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gemini-chatbot-button::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #FFD700, #1E1E1E, #FFD700);
+        border-radius: 50px;
+        z-index: -1;
+        animation: glowing 3s linear infinite;
+    }
+
+    @keyframes glowing {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+
+    .gemini-chatbot-button ion-icon {
+        font-size: 24px;
+        color: #FFD700;
+    }
+
+    .gemini-chatbot-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Chatbot Window */
+    .gemini-chatbot-window {
+        position: absolute;
+        bottom: 90px;
+        right: 0;
+        width: 380px;
+        height: 600px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        animation: slideUp 0.3s ease;
+    }
+
+    .gemini-chatbot-window.active {
+        display: flex;
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Chatbot Header */
+    .gemini-chatbot-header {
+        background: linear-gradient(135deg, #1E1E1E 0%, #2D2D2D 100%);
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #FFD700;
+    }
+
+    .gemini-header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .gemini-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #FFD700;
+    }
+
+    .gemini-header-left h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .gemini-status {
+        margin: 0;
+        font-size: 12px;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .gemini-status::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #4CAF50;
+        border-radius: 50%;
+        display: inline-block;
+        animation: pulse 2s infinite;
+    }
+
+    .gemini-close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+    }
+
+    .gemini-close-btn:hover {
+        transform: rotate(90deg);
+    }
+
+    /* Chat Messages Area */
+    .gemini-chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+        background: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gemini-message {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .bot-message {
+        justify-content: flex-start;
+    }
+
+    .user-message {
+        justify-content: flex-end;
+    }
+
+    .message-content {
+        max-width: 80%;
+        padding: 12px 16px;
+        border-radius: 15px;
+        font-size: 14px;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
+
+    .bot-message .message-content {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .user-message .message-content {
+        background: linear-gradient(135deg, #1E1E1E 0%, #2D2D2D 100%);
+        color: white;
+        border-bottom-right-radius: 5px;
+    }
+
+    /* Loading Indicator */
+    .typing-indicator {
+        display: flex;
+        gap: 5px;
+        padding: 10px 15px;
+        background: white;
+        border-radius: 15px;
+        border-bottom-left-radius: 5px;
+        width: fit-content;
+    }
+
+    .typing-indicator span {
+        width: 8px;
+        height: 8px;
+        background: #999;
+        border-radius: 50%;
+        animation: typing 1.4s infinite;
+    }
+
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+        0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+        30% { transform: translateY(-5px); opacity: 1; }
+    }
+
+    /* Suggested Questions */
+    .suggested-questions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px 15px;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .suggested-q {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 15px;
+        padding: 6px 12px;
+        font-size: 12px;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s;
+        white-space: nowrap;
+    }
+
+    .suggested-q:hover {
+        background: #1E1E1E;
+        color: white;
+        border-color: #1E1E1E;
+    }
+
+    /* Input Area */
+    .gemini-chat-input {
+        border-top: 1px solid #e0e0e0;
+        background: white;
+    }
+
+    .input-container {
+        display: flex;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    #userMessage {
+        flex: 1;
+        padding: 12px 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    #userMessage:focus {
+        border-color: #1E1E1E;
+    }
+
+    .gemini-send-btn {
+        background: #1E1E1E;
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .gemini-send-btn:hover {
+        background: #FFD700;
+        color: #1E1E1E;
+        transform: scale(1.1);
+    }
+
+    .gemini-send-btn ion-icon {
+        font-size: 20px;
+    }
+
+    .gemini-disclaimer {
+        font-size: 10px;
+        color: #999;
+        text-align: center;
+        padding: 5px 15px 10px;
+        margin: 0;
+    }
+
+    /* Scrollbar Styling */
+    .gemini-chat-messages::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .gemini-chat-messages::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .gemini-chat-messages::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+
+    .gemini-chat-messages::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+        .gemini-chatbot-container {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .gemini-chatbot-window {
+            width: calc(100vw - 40px);
+            height: 500px;
+            bottom: 80px;
+        }
+
+        .gemini-chatbot-button span {
+            display: none;
+        }
+
+        .gemini-chatbot-button {
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .gemini-chatbot-button ion-icon {
+            margin: 0;
+        }
+    }
+    </style>
+
+    <!-- Gemini Chatbot JavaScript -->
+    <script>
+    // Gemini Chatbot Configuration
+    const GEMINI_API_KEY = 'AIzaSyD2U8D9xYn9_iU6T3kU_bXA4KsBqnJacJs'; // Replace with your actual API key
+    const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+
+    // System prompt for fashion assistant
+    const SYSTEM_PROMPT = `You are a helpful fashion assistant for HR FashionStyle, an Indian fashion brand based in Vadodara. 
+    Key information:
+    - Free shipping on orders over ₹3000
+    - 7-day return policy
+    - Location: Alkapuri, Vadodara - 390007
+    - Phone: +91 7861976 128
+    - Email: hr@safashionstyle.com
+    - Products include: Women's wear, Men's wear, Accessories, Jewelry, Bags
+    - Current trending products: Elegant Blue Dress (₹799.99), Classic Trench Coat (₹449.99), Designer Handbag (₹559.99)
+    
+    Be friendly, professional, and helpful. If you don't know something, suggest contacting customer support.
+    Keep responses concise and relevant to Indian fashion context.`;
+
+    // DOM Elements
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const closeChatbot = document.getElementById('closeChatbot');
+    const chatMessages = document.getElementById('chatMessages');
+    const userMessage = document.getElementById('userMessage');
+    const sendButton = document.getElementById('sendMessage');
+    const suggestedQuestions = document.querySelectorAll('.suggested-q');
+
+    // Toggle chatbot window
+    chatbotToggle.addEventListener('click', () => {
+        chatbotWindow.classList.toggle('active');
+    });
+
+    closeChatbot.addEventListener('click', () => {
+        chatbotWindow.classList.remove('active');
+    });
+
+    // Send message function
+    async function sendMessageToGemini(message) {
+        // Add user message to chat
+        addMessage(message, 'user');
+        
+        // Show typing indicator
+        const typingIndicator = showTypingIndicator();
+        
+        try {
+            const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            role: 'user',
+                            parts: [{ text: SYSTEM_PROMPT + '\n\nUser question: ' + message }]
+                        }
+                    ],
+                    generationConfig: {
+                        temperature: 0.7,
+                        maxOutputTokens: 500,
+                    }
+                })
+            });
+
+            const data = await response.json();
+            
+            // Remove typing indicator
+            typingIndicator.remove();
+            
+            if (data.candidates && data.candidates[0].content.parts[0].text) {
+                const botResponse = data.candidates[0].content.parts[0].text;
+                addMessage(botResponse, 'bot');
+            } else {
+                addMessage("I'm having trouble connecting. Please try again or contact support directly.", 'bot');
+            }
+        } catch (error) {
+            console.error('Error calling Gemini API:', error);
+            typingIndicator.remove();
+            addMessage("I'm having trouble connecting. Please try again later.", 'bot');
+        }
+    }
+
+    // Add message to chat
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `gemini-message ${sender}-message`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
+        contentDiv.textContent = text;
+        
+        messageDiv.appendChild(contentDiv);
+        chatMessages.appendChild(messageDiv);
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Show typing indicator
+    function showTypingIndicator() {
+        const indicator = document.createElement('div');
+        indicator.className = 'gemini-message bot-message typing';
+        indicator.innerHTML = `
+            <div class="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        `;
+        chatMessages.appendChild(indicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        return indicator;
+    }
+
+    // Send message event
+    sendButton.addEventListener('click', () => {
+        const message = userMessage.value.trim();
+        if (message) {
+            sendMessageToGemini(message);
+            userMessage.value = '';
+        }
+    });
+
+    // Send on Enter key
+    userMessage.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const message = userMessage.value.trim();
+            if (message) {
+                sendMessageToGemini(message);
+                userMessage.value = '';
+            }
+        }
+    });
+
+    // Suggested questions
+    suggestedQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+            const question = button.textContent;
+            sendMessageToGemini(question);
+        });
+    });
+
+    // Close chatbot when clicking outside (optional)
+    document.addEventListener('click', (e) => {
+        if (!chatbotWindow.contains(e.target) && 
+            !chatbotToggle.contains(e.target) && 
+            chatbotWindow.classList.contains('active')) {
+            chatbotWindow.classList.remove('active');
+        }
+    });
+    </script>
+    <!-- ========== END GOOGLE GEMINI CHATBOT INTEGRATION ========== -->
+
     <!-- Scripts -->
     <!-- AOS Removed -->
     <script src="JavaScript/index.js"></script>

@@ -18,6 +18,11 @@ async function getProductsData() {
         const response = await fetch('json/products.json');
         products = await response.json();
         console.log('Products loaded:', products.length);
+        console.log('Sample product price formats:', products.slice(0, 3).map(p => ({
+            name: p.name,
+            price: p.price,
+            priceType: typeof p.price
+        })));
     } catch (error) {
         console.error('Error loading products:', error);
         // Use hardcoded products as fallback
@@ -25,17 +30,44 @@ async function getProductsData() {
     }
 }
 
-// Fallback products if JSON fails
+// Fallback products if JSON fails (with INR prices)
 function getFallbackProducts() {
     return [
         {
             id: 1,
             name: "Elegant Blue Evening Dress",
-            price: "$129.99",
+            price: "₹899",
             images: ["https://i.pinimg.com/736x/94/5b/79/945b7931fbb9f8922102ac0566e02060.jpg"],
             category: "Women's Evening Wear"
         },
-        // Add more fallback products as needed
+        {
+            id: 2,
+            name: "Designer Handbag",
+            price: "₹3299",
+            images: ["images/bag1.jpg"],
+            category: "Bags"
+        },
+        {
+            id: 3,
+            name: "Gold Plated Necklace",
+            price: "₹2199",
+            images: ["images/jewelry1.jpg"],
+            category: "Jewelry"
+        },
+        {
+            id: 4,
+            name: "Men's Formal Shirt",
+            price: "₹1899",
+            images: ["images/shirt1.jpg"],
+            category: "Men's Fashion"
+        },
+        {
+            id: 5,
+            name: "Leather Wallet",
+            price: "₹1299",
+            images: ["images/wallet1.jpg"],
+            category: "Accessories"
+        }
     ];
 }
 
@@ -59,6 +91,10 @@ function saveCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartCount();
         dispatchCartUpdatedEvent();
+        // Update cart page if we're on it
+        if (window.location.pathname.includes('cartPage.html')) {
+            updateCartPage();
+        }
     } catch (error) {
         console.error('Error saving cart:', error);
     }
@@ -73,13 +109,27 @@ function addToCart(productId, quantity = 1) {
         return false;
     }
 
+    // Ensure price is stored as a number without any currency symbol
+    let productPrice = product.price;
+    if (typeof productPrice === 'string') {
+        // Remove ₹ symbol and any other non-numeric characters
+        productPrice = parseFloat(productPrice.replace(/[^0-9.-]+/g, '')) || 0;
+    }
+    
+    // Create a clean product object with numeric price
+    const cleanProduct = {
+        ...product,
+        price: productPrice, // Store as number
+        originalPrice: product.originalPrice ? parseFloat(product.originalPrice.replace(/[^0-9.-]+/g, '')) || 0 : null
+    };
+
     const existingItem = cart.find(item => item.id == productId);
     
     if (existingItem) {
         existingItem.quantity += quantity;
     } else {
         cart.push({
-            ...product,
+            ...cleanProduct,
             quantity: quantity,
             addedAt: new Date().toISOString()
         });
@@ -127,7 +177,8 @@ function updateQuantity(productId, newQuantity) {
 // Calculate cart total
 function calculateCartTotal() {
     return cart.reduce((total, item) => {
-        const price = parseFloat(item.price.replace('$', '')) || 0;
+        const price = typeof item.price === 'number' ? item.price : 
+                     (parseFloat(item.price?.replace(/[^0-9.-]+/g, '')) || 0);
         return total + (price * (item.quantity || 1));
     }, 0);
 }
@@ -139,7 +190,7 @@ function updateCartCount() {
     // Update all cart count elements
     document.querySelectorAll('.cart-count, #cart-counter').forEach(element => {
         element.textContent = totalItems;
-        element.style.display = totalItems > 0 ? 'flex' : 'none';
+        element.style.display = totalItems > 0 ? 'flex' : 'block';
     });
     
     return totalItems;
@@ -160,13 +211,14 @@ function updateCartDisplay() {
                 <a href="products.html" class="btn-primary" style="margin-top: 1rem;">Start Shopping</a>
             </div>
         `;
-        cartTotalElement.textContent = '$0.00';
+        cartTotalElement.textContent = '₹0.00';
     } else {
         let itemsHTML = '';
         let subtotal = 0;
         
         cart.forEach(item => {
-            const price = parseFloat(item.price.replace('$', '')) || 0;
+            const price = typeof item.price === 'number' ? item.price : 
+                         (parseFloat(item.price?.replace(/[^0-9.-]+/g, '')) || 0);
             const itemTotal = price * (item.quantity || 1);
             subtotal += itemTotal;
             
@@ -175,10 +227,11 @@ function updateCartDisplay() {
                     <img src="${item.images?.[0] || 'images/placeholder.jpg'}" 
                          alt="${item.name || 'Product'}" 
                          width="60" 
-                         height="60">
+                         height="60"
+                         onerror="this.src='images/placeholder.jpg'">
                     <div class="cart-item-info">
                         <h4>${item.name || 'Product'}</h4>
-                        <p>${item.price || '$0.00'} × ${item.quantity || 1}</p>
+                        <p>₹${price.toFixed(2)} × ${item.quantity || 1}</p>
                     </div>
                     <div class="cart-item-actions">
                         <button class="quantity-btn minus" data-id="${item.id}">-</button>
@@ -193,7 +246,7 @@ function updateCartDisplay() {
         });
         
         cartItemsContainer.innerHTML = itemsHTML;
-        cartTotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        cartTotalElement.textContent = `₹${subtotal.toFixed(2)}`;
         
         // Add event listeners to cart item buttons
         setupCartItemEventListeners();
@@ -204,39 +257,61 @@ function updateCartDisplay() {
 function setupCartItemEventListeners() {
     // Quantity minus buttons
     document.querySelectorAll('.quantity-btn.minus').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const productId = e.currentTarget.dataset.id;
-            const item = cart.find(item => item.id == productId);
-            if (item && item.quantity > 1) {
-                item.quantity--;
-                saveCart();
-                updateCartDisplay();
-            }
-        });
+        button.removeEventListener('click', handleMinusClick);
+        button.addEventListener('click', handleMinusClick);
     });
     
     // Quantity plus buttons
     document.querySelectorAll('.quantity-btn.plus').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const productId = e.currentTarget.dataset.id;
-            const item = cart.find(item => item.id == productId);
-            if (item) {
-                item.quantity++;
-                saveCart();
-                updateCartDisplay();
-            }
-        });
+        button.removeEventListener('click', handlePlusClick);
+        button.addEventListener('click', handlePlusClick);
     });
     
     // Remove item buttons
     document.querySelectorAll('.remove-item').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const productId = e.currentTarget.dataset.id;
-            if (removeFromCart(productId)) {
-                updateCartDisplay();
-            }
-        });
+        button.removeEventListener('click', handleRemoveClick);
+        button.addEventListener('click', handleRemoveClick);
     });
+}
+
+// Handler functions for cart item events
+function handleMinusClick(e) {
+    e.preventDefault();
+    const productId = e.currentTarget.dataset.id;
+    const item = cart.find(item => item.id == productId);
+    if (item && item.quantity > 1) {
+        item.quantity--;
+        saveCart();
+        updateCartDisplay();
+        if (window.location.pathname.includes('cartPage.html')) {
+            updateCartPage();
+        }
+    }
+}
+
+function handlePlusClick(e) {
+    e.preventDefault();
+    const productId = e.currentTarget.dataset.id;
+    const item = cart.find(item => item.id == productId);
+    if (item) {
+        item.quantity++;
+        saveCart();
+        updateCartDisplay();
+        if (window.location.pathname.includes('cartPage.html')) {
+            updateCartPage();
+        }
+    }
+}
+
+function handleRemoveClick(e) {
+    e.preventDefault();
+    const productId = e.currentTarget.dataset.id;
+    if (removeFromCart(productId)) {
+        updateCartDisplay();
+        if (window.location.pathname.includes('cartPage.html')) {
+            updateCartPage();
+        }
+    }
 }
 
 // Setup cart event listeners
@@ -274,11 +349,61 @@ function setupCartEventListeners() {
         
         if (cartSidebar && cartSidebar.classList.contains('active') &&
             !cartSidebar.contains(e.target) &&
-            !cartIcon.contains(e.target)) {
+            !cartIcon?.contains(e.target)) {
             cartSidebar.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
+
+    // Promo code apply button
+    const applyBtn = document.querySelector('.apply-btn');
+    if (applyBtn) {
+        applyBtn.addEventListener('click', applyPromoCode);
+    }
+
+    // Checkout buttons
+    document.querySelectorAll('.checkout-btn').forEach(btn => {
+        btn.removeEventListener('click', checkout);
+        btn.addEventListener('click', checkout);
+    });
+}
+
+// Apply promo code
+function applyPromoCode() {
+    const codeInput = document.getElementById('code');
+    if (!codeInput) return;
+    
+    const code = codeInput.value.trim().toUpperCase();
+    
+    // Example promo codes
+    const promoCodes = {
+        'SAVE10': 0.1, // 10% off
+        'SAVE20': 0.2, // 20% off
+        'SAVE50': 0.5, // 50% off
+        'FREESHIP': 0 // Free shipping (handled separately)
+    };
+    
+    if (promoCodes.hasOwnProperty(code)) {
+        if (code === 'FREESHIP') {
+            // Apply free shipping
+            localStorage.setItem('promoCode', JSON.stringify({
+                code: code,
+                type: 'freeshipping'
+            }));
+            showNotification('Free shipping applied!', 'success');
+        } else {
+            // Apply discount
+            localStorage.setItem('promoCode', JSON.stringify({
+                code: code,
+                type: 'discount',
+                value: promoCodes[code]
+            }));
+            showNotification(`${code} applied! ${promoCodes[code] * 100}% discount`, 'success');
+        }
+        updateCartPage();
+    } else {
+        showNotification('Invalid promo code', 'error');
+    }
 }
 
 // Check cart and update UI
@@ -293,25 +418,131 @@ function checkCart() {
 
 // Update cart page
 function updateCartPage() {
+    const cartProductsContainer = document.querySelector('.cart_products');
+    const cartCountsSpan = document.getElementById('cart_counts');
+    const subtotalSpan = document.getElementById('Subtotal');
+    const deliverySpan = document.getElementById('Delivery');
+    const totalOrderSpan = document.getElementById('total_order');
+    
+    if (!cartProductsContainer) return;
+    
     if (cart.length === 0) {
-        document.querySelector('.cart-items-container')?.innerHTML = `
+        cartProductsContainer.innerHTML = `
             <div class="empty-cart-message">
                 <ion-icon name="bag-outline"></ion-icon>
-                <h3>Your cart is empty</h3>
-                <p>Add some products to your cart to continue shopping</p>
-                <a href="products.html" class="btn-primary">Browse Products</a>
+                <p>Your shopping bag is empty</p>
+                <a href="products.html" class="btn-primary">Continue Shopping</a>
             </div>
         `;
-    } else {
-        // Update cart page items and totals
-        const subtotal = calculateCartTotal();
-        const shipping = 10.00; // Example shipping cost
-        const total = subtotal + shipping;
         
-        document.getElementById('cartSubtotal')?.textContent = `$${subtotal.toFixed(2)}`;
-        document.getElementById('cartShipping')?.textContent = `$${shipping.toFixed(2)}`;
-        document.getElementById('cartTotal')?.textContent = `$${total.toFixed(2)}`;
+        if (cartCountsSpan) cartCountsSpan.textContent = '(0 items)';
+        if (subtotalSpan) subtotalSpan.textContent = '₹0.00';
+        if (deliverySpan) deliverySpan.textContent = '₹100.00';
+        if (totalOrderSpan) totalOrderSpan.textContent = '₹100.00';
+        
+    } else {
+        let productsHTML = '';
+        let subtotal = 0;
+        
+        cart.forEach(item => {
+            // Get price (already stored as number from addToCart)
+            const price = typeof item.price === 'number' ? item.price : 
+                         (parseFloat(item.price?.replace(/[^0-9.-]+/g, '')) || 0);
+            
+            // Calculate item total
+            const itemTotal = price * (item.quantity || 1);
+            subtotal += itemTotal;
+            
+            // Format the price for display
+            const formattedPrice = `₹${itemTotal.toFixed(2)}`;
+            
+            productsHTML += `
+                <div class="cart-product-item" data-id="${item.id}">
+                    <div class="product-image">
+                        <img src="${item.images?.[0] || 'images/placeholder.jpg'}" 
+                             alt="${item.name || 'Product'}"
+                             onerror="this.src='images/placeholder.jpg'">
+                    </div>
+                    <div class="product-details">
+                        <h3>${item.name || 'Product'}</h3>
+                        <p class="product-category">${item.category || 'Fashion'}</p>
+                        <div class="product-price">
+                            <span class="current-price">${formattedPrice}</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-id="${item.id}">-</button>
+                                <span class="quantity">${item.quantity || 1}</span>
+                                <button class="quantity-btn plus" data-id="${item.id}">+</button>
+                            </div>
+                            <button class="remove-btn" data-id="${item.id}">
+                                <ion-icon name="trash-outline"></ion-icon>
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        
+        // Calculate delivery (free over ₹3000)
+        const delivery = subtotal > 3000 ? 0 : 100;
+        const total = subtotal + delivery;
+        
+        // Update UI with formatted prices
+        if (cartCountsSpan) cartCountsSpan.textContent = `(${cart.length} items)`;
+        if (subtotalSpan) subtotalSpan.textContent = `₹${subtotal.toFixed(2)}`;
+        if (deliverySpan) deliverySpan.textContent = delivery === 0 ? 'Free' : `₹${delivery.toFixed(2)}`;
+        if (totalOrderSpan) totalOrderSpan.textContent = `₹${total.toFixed(2)}`;
+        
+        // Set the products HTML
+        cartProductsContainer.innerHTML = productsHTML;
+        
+        // Add event listeners for cart page items
+        setupCartPageEventListeners();
     }
+}
+
+// Setup cart page event listeners
+function setupCartPageEventListeners() {
+    // Quantity minus buttons
+    document.querySelectorAll('.cart-product-item .quantity-btn.minus').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productId = e.currentTarget.dataset.id;
+            const item = cart.find(item => item.id == productId);
+            if (item && item.quantity > 1) {
+                item.quantity--;
+                saveCart();
+                updateCartPage();
+            }
+        });
+    });
+    
+    // Quantity plus buttons
+    document.querySelectorAll('.cart-product-item .quantity-btn.plus').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productId = e.currentTarget.dataset.id;
+            const item = cart.find(item => item.id == productId);
+            if (item) {
+                item.quantity++;
+                saveCart();
+                updateCartPage();
+            }
+        });
+    });
+    
+    // Remove buttons
+    document.querySelectorAll('.cart-product-item .remove-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productId = e.currentTarget.dataset.id;
+            if (removeFromCart(productId)) {
+                updateCartPage();
+            }
+        });
+    });
 }
 
 // Checkout function
@@ -336,14 +567,21 @@ function checkout() {
 
 // Show notification
 function showNotification(message, type = 'success') {
-    // Use existing notification system if available
-    if (typeof window.showNotification === 'function') {
-        window.showNotification(message, type);
-        return;
+    // Create notification element if it doesn't exist
+    let notification = document.querySelector('.notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.className = 'notification';
+        document.body.appendChild(notification);
     }
     
-    // Fallback notification
-    console.log(`${type.toUpperCase()}: ${message}`);
+    notification.textContent = message;
+    notification.className = `notification ${type}`;
+    notification.style.display = 'block';
+    
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 3000);
 }
 
 // Dispatch cart updated event
@@ -351,6 +589,26 @@ function dispatchCartUpdatedEvent() {
     window.dispatchEvent(new CustomEvent('cartUpdated', {
         detail: { cart: cart, total: calculateCartTotal() }
     }));
+}
+
+// Debug function to check cart items
+function debugCart() {
+    console.log('Current cart contents:', cart);
+    cart.forEach((item, index) => {
+        console.log(`Item ${index + 1}:`, {
+            name: item.name,
+            price: item.price,
+            priceType: typeof item.price,
+            quantity: item.quantity,
+            total: (typeof item.price === 'number' ? item.price : 0) * (item.quantity || 1)
+        });
+    });
+}
+
+// Calculate cart total in INR
+function getCartTotalINR() {
+    const total = calculateCartTotal();
+    return `₹${total.toFixed(2)}`;
 }
 
 // Initialize on page load
@@ -363,4 +621,5 @@ window.updateQuantity = updateQuantity;
 window.checkout = checkout;
 window.getCart = () => cart;
 window.getCartTotal = calculateCartTotal;
-
+window.getCartTotalINR = getCartTotalINR;
+window.debugCart = debugCart;

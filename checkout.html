@@ -3,35 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the latest trends in fashion for 
-    women and men at SA FashionStyle. Shop our wide selection of clothes, bags,
-    jewelry, and more. Elevate your style with our curated collections.">
-    <meta name="keywords" content="clothes, women, men, fashion, bags, jewelry, SA FashionStyle, latest trends, stylish clothing, accessories">
+    <meta name="description" content="Discover the latest trends in fashion for women and men at SA FashionStyle.">
+    <meta name="keywords" content="clothes, women, men, fashion, bags, jewelry">
     <meta name="author" content="SA_FashionStyle">
     <link rel="icon" href="images/logowhite.jpg" type="image/x-icon">
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-     <!-- css  -->
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- css  -->
     <link rel="stylesheet" href="Style/checkout.css">
-     <!-- animation icon -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
-     <title>SA__FashionStyle</title>
+    <!-- animation icon -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <title>HR FashionStyle - Checkout</title>
 </head>
 <body>
-    <div class="checkout" id="checkout-overlay">
-         <div class="checkout-container">
+    <!-- Customer Details Form -->
+    <div class="customer-form-container" id="customerForm">
+        <div class="customer-form">
+            <h2>Customer Information</h2>
+            <form id="checkoutForm" onsubmit="return submitCustomerDetails(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" required placeholder="10-digit mobile number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Street Address *</label>
+                    <input type="text" id="address" required placeholder="House number, street name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address2">Apartment/Suite (Optional)</label>
+                    <input type="text" id="address2" placeholder="Apartment, suite, unit etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" required placeholder="Enter your city">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <input type="text" id="state" required placeholder="State">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pincode">Pincode *</label>
+                        <input type="text" id="pincode" required placeholder="6-digit pincode">
+                    </div>
+                </div>
+
+                <!-- Payment Method Section -->
+                <div class="payment-section">
+                    <h3>Payment Method</h3>
+                    
+                    <div class="payment-options">
+                        <!-- Credit/Debit Card -->
+                        <div class="payment-option">
+                            <input type="radio" name="paymentMethod" id="cardPayment" value="card" checked>
+                            <label for="cardPayment">
+                                <i class="fas fa-credit-card"></i>
+                                Credit/Debit Card
+                            </label>
+                            <div class="card-details" id="cardDetails">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date</label>
+                                        <input type="text" id="expiryDate" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card</label>
+                                    <input type="text" id="cardName" placeholder="As shown on card">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UPI Payment -->
+                        <div class="payment-option">
+                            <input type="radio" name="paymentMethod" id="upiPayment" value="upi">
+                            <label for="upiPayment">
+                                <i class="fas fa-mobile-alt"></i>
+                                UPI
+                            </label>
+                            <div class="upi-details" id="upiDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="upiId">UPI ID</label>
+                                    <input type="text" id="upiId" placeholder="username@okhdfcbank">
+                                </div>
+                                <div class="qr-code">
+                                    <p>Or scan QR code:</p>
+                                    <div class="qr-placeholder">
+                                        <i class="fas fa-qrcode"></i>
+                                        <span>QR Code will appear here</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Net Banking -->
+                        <div class="payment-option">
+                            <input type="radio" name="paymentMethod" id="netbankingPayment" value="netbanking">
+                            <label for="netbankingPayment">
+                                <i class="fas fa-university"></i>
+                                Net Banking
+                            </label>
+                            <div class="netbanking-details" id="netbankingDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="bankSelect">Select Bank</label>
+                                    <select id="bankSelect">
+                                        <option value="">Choose your bank</option>
+                                        <option value="sbi">State Bank of India</option>
+                                        <option value="hdfc">HDFC Bank</option>
+                                        <option value="icici">ICICI Bank</option>
+                                        <option value="axis">Axis Bank</option>
+                                        <option value="kotak">Kotak Mahindra Bank</option>
+                                        <option value="yes">Yes Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cash on Delivery -->
+                        <div class="payment-option">
+                            <input type="radio" name="paymentMethod" id="codPayment" value="cod">
+                            <label for="codPayment">
+                                <i class="fas fa-truck"></i>
+                                Cash on Delivery
+                            </label>
+                            <div class="cod-details" id="codDetails" style="display: none;">
+                                <p class="cod-message">
+                                    <i class="fas fa-info-circle"></i>
+                                    Pay with cash when your order is delivered
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                 <!-- Order Summary -->
+<div class="order-summary">
+    <h3>Order Summary</h3>
+    <div id="cartItems" class="cart-items"></div>
+    
+    <!-- Price Breakdown -->
+    <div class="price-breakdown">
+        <div class="breakdown-row">
+            <span>Subtotal:</span>
+            <span id="formSubtotal">₹0.00</span>
+        </div>
+        <div class="breakdown-row">
+            <span>Delivery Charge:</span>
+            <span id="formDeliveryCharge">₹100.00</span>
+        </div>
+        <div class="breakdown-row total">
+            <strong>Total:</strong>
+            <strong id="formTotalPrice">₹0.00</strong>
+        </div>
+    </div>
+</div>
+
+                
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Checkout Confirmation -->
+    <div class="checkout" id="checkout-overlay" style="display: none;">
+        <div class="checkout-container">
             <div id="checkoutIcon" style="width: 200px; height: 200px;"></div>
-            <h4>thank you. your order has been received</h4>
-            <div>
-                <span>order:</span> <span id="id_order">1</span>
-                <span>total:</span> <span id="total_price"> $ 124.05</span>
-                <span>date:</span> <span id="order_date"></span>
+            <h4>Thank you! Your order has been received</h4>
+            
+            <!-- Customer Details Section -->
+            <div class="customer-details">
+                <h5>Customer Information</h5>
+                <p><strong>Name:</strong> <span id="customer_name"></span></p>
+                <p><strong>Email:</strong> <span id="customer_email"></span></p>
+                <p><strong>Phone:</strong> <span id="customer_phone"></span></p>
+                <p><strong>Address:</strong> <span id="customer_address"></span></p>
             </div>
-            <button id="back_btn" onclick="backHome();">back to home</button>
-         </div>
+            
+            <!-- Payment Details Section -->
+            <div class="payment-details">
+                <h5>Payment Information</h5>
+                <p><strong>Payment Method:</strong> <span id="payment_method"></span></p>
+                <p><strong>Payment Status:</strong> <span id="payment_status" class="status-pending">Pending</span></p>
+            </div>
+            
+            <!-- Order Details Section -->
+            <div class="order-details">
+                <h5>Order Details</h5>
+                <p><strong>Order ID:</strong> <span id="id_order">#</span></p>
+                <p><strong>Total Amount:</strong> <span id="total_price">₹</span></p>
+                <p><strong>Order Date:</strong> <span id="order_date"></span></p>
+            </div>
+            
+            <button id="back_btn" onclick="backHome();">Back to Home</button>
+        </div>
     </div> 
+    
     <script src="JavaScript/checkout.js"></script>
 </body>
 </html>

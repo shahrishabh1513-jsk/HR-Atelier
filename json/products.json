@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Elegant Blue Evening Dress",
-        "price": "$129.99",
+        "price": "₹899",
         "images": [
             "https://i.pinimg.com/736x/94/5b/79/945b7931fbb9f8922102ac0566e02060.jpg",
             "https://i.pinimg.com/736x/94/5b/79/945b7931fbb9f8922102ac0566e02060.jpg"
@@ -22,7 +22,7 @@
     {
         "id": 2,
         "name": "Classic Beige Trench Coat",
-        "price": "$89.99",
+        "price": "₹1199",
         "images": [
             "https://i.pinimg.com/736x/3c/5a/bb/3c5abb5bd7acd1d4b6d7a62996c8dcf8.jpg",
             "https://i.pinimg.com/736x/3c/5a/bb/3c5abb5bd7acd1d4b6d7a62996c8dcf8.jpg"
@@ -42,7 +42,7 @@
     {
         "id": 3,
         "name": "Luxury Designer Handbag",
-        "price": "$249.99",
+        "price": "₹699",
         "images": [
             "https://i.pinimg.com/1200x/f1/ab/1a/f1ab1a7aac776d74986bfb925a562594.jpg",
             "https://i.pinimg.com/1200x/f1/ab/1a/f1ab1a7aac776d74986bfb925a562594.jpg"
@@ -62,7 +62,7 @@
     {
         "id": 4,
         "name": "Summer Floral Maxi Dress",
-        "price": "$69.99",
+        "price": "₹799",
         "images": [
             "https://i.pinimg.com/1200x/b0/54/32/b05432d015a975491fd1f1e6a9417849.jpg",
             "https://i.pinimg.com/1200x/b0/54/32/b05432d015a975491fd1f1e6a9417849.jpg"
@@ -82,7 +82,7 @@
     {
         "id": 5,
         "name": "Minimalist Gold Jewelry Set",
-        "price": "$54.99",
+        "price": "₹2999",
         "images": [
             "https://i.pinimg.com/1200x/72/2a/62/722a6289b84f6ba941c59e5af5a88994.jpg",
             "https://i.pinimg.com/1200x/72/2a/62/722a6289b84f6ba941c59e5af5a88994.jpg"
@@ -102,7 +102,7 @@
     {
         "id": 6,
         "name": "Casual Denim Jacket",
-        "price": "$59.99",
+        "price": "₹1299",
         "images": [
             "https://i.pinimg.com/1200x/e3/70/a3/e370a395ae8b109aa5f2664efaa386ab.jpg",
             "https://i.pinimg.com/1200x/e3/70/a3/e370a395ae8b109aa5f2664efaa386ab.jpg"
@@ -122,7 +122,7 @@
     {
         "id": 7,
         "name": "Elegant Black Evening Gown",
-        "price": "$149.99",
+        "price": "₹1299",
         "images": [
             "https://i.pinimg.com/736x/5d/b5/01/5db501461c00d9f18dd638c428ab46d6.jpg",
             "https://i.pinimg.com/736x/5d/b5/01/5db501461c00d9f18dd638c428ab46d6.jpg"
@@ -142,7 +142,7 @@
     {
         "id": 8,
         "name": "Bohemian Style Dress",
-        "price": "$79.99",
+        "price": "₹899",
         "images": [
             "https://i.pinimg.com/736x/c0/d8/1a/c0d81af974d6447d79e15bce7bf6274d.jpg",
             "https://i.pinimg.com/736x/c0/d8/1a/c0d81af974d6447d79e15bce7bf6274d.jpg"
@@ -162,7 +162,7 @@
     {
         "id": 9,
         "name": "Classic Men's Blazer",
-        "price": "$119.99",
+        "price": "₹1599",
         "images": [
             "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
             "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
@@ -182,7 +182,7 @@
     {
         "id": 10,
         "name": "Leather Messenger Bag",
-        "price": "$89.99",
+        "price": "₹1399",
         "images": [
             "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
             "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
@@ -202,7 +202,7 @@
     {
         "id": 11,
         "name": "Silver Pendant Necklace",
-        "price": "$39.99",
+        "price": "₹1699",
         "images": [
             "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80",
             "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80"
@@ -222,7 +222,7 @@
     {
         "id": 12,
         "name": "Casual Men's Shirt",
-        "price": "$45.99",
+        "price": "₹899",
         "images": [
             "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
             "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
@@ -242,7 +242,7 @@
     {
         "id": 13,
         "name": "Designer Bedding Set",
-        "price": "$129.99",
+        "price": "₹1199",
         "images": [
             "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
             "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
@@ -262,7 +262,7 @@
     {
         "id": 14,
         "name": "Men's Leather Jacket",
-        "price": "$199.99",
+        "price": "₹1999",
         "images": [
             "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
             "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
@@ -282,7 +282,7 @@
     {
         "id": 15,
         "name": "Pearl Earrings Set",
-        "price": "$49.99",
+        "price": "₹499",
         "images": [
             "https://images.unsplash.com/photo-1630019852942-f89202989a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
             "https://images.unsplash.com/photo-1630019852942-f89202989a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
@@ -302,7 +302,7 @@
     {
         "id": 16,
         "name": "Women's Ankle Boots",
-        "price": "$79.99",
+        "price": "₹899",
         "images": [
             "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
             "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
@@ -322,7 +322,7 @@
     {
         "id": 17,
         "name": "Silk Scarf",
-        "price": "$34.99",
+        "price": "₹699",
         "images": [
             "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
             "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
@@ -342,7 +342,7 @@
     {
         "id": 18,
         "name": "Men's Formal Shoes",
-        "price": "$99.99",
+        "price": "₹1299",
         "images": [
             "https://images.unsplash.com/photo-1614252369475-531eba835eb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
             "https://images.unsplash.com/photo-1614252369475-531eba835eb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
@@ -362,7 +362,7 @@
     {
         "id": 19,
         "name": "Decorative Throw Pillows",
-        "price": "$29.99",
+        "price": "₹399",
         "images": [
             "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
             "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
@@ -382,7 +382,27 @@
     {
         "id": 20,
         "name": "Women's Handbag Collection",
-        "price": "$159.99",
+        "price": "₹1299",
+        "images": [
+            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
+            "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
+        ],
+        "category": "Bags",
+        "subcategory": "Handbags",
+        "description": "Designer-inspired structured handbag with gold-tone hardware. Perfect for work and special occasions.",
+        "rating": 4.7,
+        "reviews": 36,
+        "isTrending": true,
+        "isNew": true,
+        "sizes": ["One Size"],
+        "colors": ["Black", "Beige", "Navy"],
+        "inStock": true,
+        "featured": true
+    },
+    {
+        "id": 21,
+        "name": "Handbag Collection",
+        "price": "₹1299",
         "images": [
             "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
             "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
