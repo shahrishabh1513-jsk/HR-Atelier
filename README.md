@@ -66,7 +66,7 @@ This project was created to:
 ---
 
 ## 📸 Screenshots
-<img width="1865" height="870" alt="HR_SS1" src="https://github.com/user-attachments/assets/16843060-7c83-4b04-ad5e-c3f458cd93ce" />
+<img width="1882" height="889" alt="Screenshot 2026-04-25 112622" src="https://github.com/user-attachments/assets/af65852d-9b2a-4dc7-85fe-d2051a14fcad" />
 <img width="1878" height="888" alt="HR_SS2" src="https://github.com/user-attachments/assets/df9439bb-46ab-427d-90af-878f9116e1ed" />
 
 ---
