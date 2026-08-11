@@ -66,8 +66,8 @@
 </td>
 <td align="center" width="33%">   
 
-<b>🛍️ Shop</b><br/><br/>
-<img src="https://github.com/user-attachments/assets/023da935-1b2f-4d1b-a2fa-4baadf224ce4" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
+<b>🛍️ Shop</b><br/><br/> 
+<img src="https://github.com/user-attachments/assets/0878c19d-fd3e-4fba-ac65-c6e58665458d" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
 </td>
 <td align="center" width="33%">  
 
