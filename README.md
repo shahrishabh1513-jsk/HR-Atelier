@@ -64,9 +64,10 @@
 <b>🏠 Home</b><br/><br/>
 <img src="https://github.com/user-attachments/assets/6babbdd7-dd99-49b2-9dd1-79efff3eeac9" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
 </td>
-<td align="center" width="33%">
+<td align="center" width="33%">   
+
 <b>🛍️ Shop</b><br/><br/>
-<img src="./assets/hr-atelier-shop.png" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
+<img src="https://github.com/user-attachments/assets/023da935-1b2f-4d1b-a2fa-4baadf224ce4" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
 </td>
 <td align="center" width="33%">
 <b>ℹ️ About</b><br/><br/>
@@ -82,8 +83,6 @@
 </a>
 
 </div>
-
-> 💡 **Setup note:** Save the three screenshots into your repo at `assets/hr-atelier-home.png`, `assets/hr-atelier-shop.png`, and `assets/hr-atelier-about.png` so they render on GitHub.
 
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:C9A227,100:0D9488&height=3&section=header"/></div>
 
