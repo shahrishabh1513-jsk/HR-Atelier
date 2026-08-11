@@ -60,9 +60,9 @@
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td align="center" width="33%">    
 <b>🏠 Home</b><br/><br/>
-<img src="./assets/hr-atelier-home.png" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
+<img src="https://github.com/user-attachments/assets/6babbdd7-dd99-49b2-9dd1-79efff3eeac9" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
 </td>
 <td align="center" width="33%">
 <b>🛍️ Shop</b><br/><br/>
