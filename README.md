@@ -69,9 +69,10 @@
 <b>🛍️ Shop</b><br/><br/>
 <img src="https://github.com/user-attachments/assets/023da935-1b2f-4d1b-a2fa-4baadf224ce4" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
 </td>
-<td align="center" width="33%">
+<td align="center" width="33%">  
+
 <b>ℹ️ About</b><br/><br/>
-<img src="./assets/hr-atelier-about.png" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
+<img src="https://github.com/user-attachments/assets/3c19eadc-cb5d-4e7c-ad6d-d13f29acc309" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);"/>
 </td>
 </tr>
 </table>
