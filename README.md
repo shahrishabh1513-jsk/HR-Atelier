@@ -244,7 +244,7 @@ RT_Fashion-World/
 │   ├── cart.js                                                
 │   └── main.js                                                    
 │
-└── README.md                                                          # Project documentation
+└── README.md                                                          
 ```
 
 </details>
