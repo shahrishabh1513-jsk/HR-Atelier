@@ -233,7 +233,7 @@ RT_Fashion-World/
 ├── signup.html                               
 ├── cartPage.html                               
 ├── account.html                                  
-├── track.html                                      # Order tracking
+├── track.html                                      
 ├── about.html                                        # About us
 ├── contact.html                                        # Contact
 │
