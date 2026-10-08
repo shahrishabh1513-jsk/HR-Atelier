@@ -86,7 +86,6 @@
 
 </div>
 
-> 💡 First-load screenshots can occasionally appear blank before the screenshot cache warms up — refresh once if that happens.
 
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:F4A582,50:5CC8A0,100:8E7CC3&height=3&section=header"/></div>
 
@@ -96,7 +95,7 @@
 
 The project was built to practice **real-world storefront UX**: category-driven product browsing, sale and promo-code handling, trust signals (shipping, returns, safe payments, stylist chat), and customer account flows — all in a clean pastel visual identity, using only **HTML, CSS, and JavaScript**.
 
-> 💬 *"Pastel-season fashion for women and men, with bags, shoes and jewelry to match."*
+
 
 <div align="center">
 
@@ -225,15 +224,15 @@ flowchart LR
 RT_Fashion-World/
 │
 ├── images/
-│   ├── logo/                      # RT_Fashion World logo
-│   └── products/                    # Product & category images
+│   ├── logo/                      
+│   └── products/                    
 │
-├── index.html                          # Home page
-├── products.html                         # Shop / product catalog
-├── login.html                              # Log in page
-├── signup.html                               # Sign up page
-├── cartPage.html                               # Shopping bag
-├── account.html                                  # My orders
+├── index.html                       
+├── products.html                        
+├── login.html                              
+├── signup.html                               
+├── cartPage.html                               
+├── account.html                                  
 ├── track.html                                      # Order tracking
 ├── about.html                                        # About us
 ├── contact.html                                        # Contact
