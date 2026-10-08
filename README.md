@@ -238,11 +238,11 @@ RT_Fashion-World/
 ├── contact.html                                        
 │
 ├── css/
-│   └── style.css                                          # All styles
+│   └── style.css                                          
 │
 ├── js/
-│   ├── cart.js                                                # Bag logic
-│   └── main.js                                                    # Shared interactions
+│   ├── cart.js                                                
+│   └── main.js                                                    
 │
 └── README.md                                                          # Project documentation
 ```
