@@ -234,8 +234,8 @@ RT_Fashion-World/
 ├── cartPage.html                               
 ├── account.html                                  
 ├── track.html                                      
-├── about.html                                        # About us
-├── contact.html                                        # Contact
+├── about.html                                        
+├── contact.html                                        
 │
 ├── css/
 │   └── style.css                                          # All styles
