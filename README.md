@@ -78,7 +78,7 @@
 
 <sub>👆 Click to explore the live store</sub>
 
-<br/><br/>
+<br/>
 
 <a href="https://shahrishabh1513-jsk.github.io/RT_Fashion-World/" target="_blank">
   <img src="https://img.shields.io/badge/SHOP_NEW_ARRIVALS-Explore_The_Store-8E7CC3?style=for-the-badge&logo=shopify&logoColor=white"/>
